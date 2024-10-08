@@ -1,0 +1,340 @@
+/* Estilos del Contenedor */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de Formularios */
+form {
+    background-color: #ffffff;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: Arial, sans-serif;
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="date"],
+textarea,
+select {
+    width: calc(100% - 20px); /* Ajuste para el padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    margin-bottom: 15px;
+    box-sizing: border-box; /* Incluir padding y border en el ancho total */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+    background-color: #FF4500;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="submit"]:hover {
+    background-color: #FF6347;
+}
+
+/* Evitar barra de desplazamiento horizontal */
+body {
+    overflow-x: hidden;
+}
+
+/* Estilos Generales para Tablas */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    border: 2px solid #FFD700;
+
+}
+
+th, td {
+    border: 1px solid #007ACC;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #FF4500;
+    color: white;
+    font-size: 1.2em;
+}
+
+td {
+    background-color: #282828;
+    color: #f0f0f0;
+}
+
+td a {
+    color: #007ACC;
+    transition: color 0.3s;
+}
+
+td a:hover {
+    color: #005A9E;
+}
+
+/* Estilos para Imágenes */
+img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+/* Contenedor del slider */
+.slider {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider .slide-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    width: calc(200px * 14 * 2);
+}
+
+.slider .slide img {
+    width: 100%;
+    height: auto;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-200px * 14));
+    }
+}
+
+/* Estilos para el Footer */
+footer {
+    background-color: #282828;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+/* Estilos para Personajes */
+.personaje {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.personaje h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.personaje p {
+    margin-bottom: 10px;
+    padding: 0 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Pseudo-clases */
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #007ACC;
+    box-shadow: 0 0 5px rgba(0, 122, 204, 0.5);
+    outline: none;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .container, form {
+        width: 95%;
+    }
+
+    .centered-title h1 {
+        font-size: 3em;
+    }
+
+    .personaje p {
+        padding: 0 10px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .centered-title h1 {
+        font-size: 2em;
+    }
+
+    .personaje h2 {
+        font-size: 1.5em;
+    }
+
+    .personaje p {
+        font-size: 0.9em;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header {
+    width: 100%;
+    background: #4E94AB;
+    position: relative; /* Asegura que el header tenga contexto de posicionamiento */
+    z-index: 10; /* Asegura que el header esté encima de otros elementos */
+}
+
+#btn-menu {
+    display: none;
+}
+
+header label {
+    display: none;
+    width: 60px;
+    height: 100px;
+    padding: 10px;
+    border-right: 2px solid #fff;
+    cursor: pointer;
+    background: rgba(0,0,0,0.3);
+}
+
+.menu {
+    position: relative; /* Asegura que el menú tenga contexto de posicionamiento */
+    z-index: 10; /* Asegura que el menú esté encima de otros elementos */
+}
+
+.menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu li {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.menu li:hover {
+    background: rgba(0,0,0,0.3);
+}
+
+.menu li a {
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    header label {
+        display: block;
+    }
+
+    .menu {
+        position: absolute;
+        background: #4E94AB;
+        width: 70%;
+        margin-left: -70%;
+        transition: all 1s;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+}
+
+.menu li {
+    border-top: 1px solid #fff;
+}
+
+#btn-menu:checked ~ .menu {
+    margin: 0;
+}
+
+.imagen-reducida {
+    width: 60px;
+    height: auto;
+}
+
+body {
+    background-color: black; 
+}
+
+h1 {
+    color: white;
+}
